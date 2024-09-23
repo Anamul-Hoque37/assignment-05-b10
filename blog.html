@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Donate bangladesh</title>
-</head>
-<body>
     
+</head>
+<body class="container">
+    <header>
+        <nav class="flex justify-between items-center bg-[#F9F7F3] h-36 px-36">
+            <a href="home.html"><button class="rounded-lg bg-[#B4F461] h-12 w-28 py-3 px-8">Home</button></a>
+            <div class="flex w-64 h-12 justify-center items-center gap-2">
+                <img src="assets/logo.png" alt="">
+                <h2 class="text-xl font-semibold text-[#111111]">Donate Bangladesh</h2>
+            </div>
+            <div class="flex gap-2">
+                <img src="assets/coin.png" alt="">
+                <p class="text-xl font-medium text-[#111111B3]"><span>1000</span> BDT</p>
+            </div>
+        </nav>
+    </header>
+    <main class="flex flex-col mx-40">
+        <div class="text-4xl font-bold py-8">
+            <h1>Important FAQ</h1>
+        </div>
+        <div class="flex flex-col border-2 w-full rounded-xl">
+            <ul class="menu bg-white rounded-box">
+                <li>
+                    <details open>
+                        <summary class="text-xl font-medium">What is the Document Object Model (DOM)?</summary>
+                        <ul>
+                            <li><a>The Document Object Model (DOM) is a programming API for HTML and XML documents. It
+                                    defines the logical structure of documents and the way a document is accessed and
+                                    manipulated.</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col border-2 w-full rounded-xl">
+            <ul class="menu bg-white rounded-box">
+                <li>
+                    <details open>
+                        <summary class="text-xl font-medium">How do you select an element from the DOM ?</summary>
+                        <ul>
+                            <li><a>JavaScript provides several methods to select DOM elements. Here are some of them:
+                                    <br> Using getElementById
+                                    <br> Using getElementsByClassName
+                                    <br> Using getElementsByTagName
+                                    <br> Using querySelector
+                                    <br> Using querySelectorAll
+                                </a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col border-2 w-full rounded-xl">
+            <ul class="menu bg-white rounded-box">
+                <li>
+                    <details open>
+                        <summary class="text-xl font-medium">What is event delegation in the context of the DOM and why it is Useful?</summary>
+                        <ul>
+                        <li><a>Capturing and bubbling allow us to implement one of the most         powerful event handling
+                        patterns called event delegation.
+                        The idea is that if we have a lot of elements handled in a similar way, then instead
+                        of assigning a handler to each of them we put a single handler on their common ancestor.
+                        In the handler we get event.target to see where the event actually happened and handle </a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col border-2 w-full rounded-xl">
+            <ul class="menu bg-white rounded-box">
+                <li>
+                    <details open>
+                        <summary class="text-xl font-medium">How do you manipulate an elements attributes and style using the DOM ?</summary>
+                        <ul>
+                            <li><a>The following are the most common and practical ways you might want to manipulate the Element object:
+                               <br>1. Change the Content of an Element
+                                <br>2. Manipulate the Class Attribute
+                               <br>3. Setting CSS Styles Using JavaScript
+                               <br>4. Create, Add, and Remove Elements
+                              <br>5.  Insert Element at a Specific Position
+                               <br>6. Manipulating Element Attributes
+                               <br>7. Manipulating Data Attributes.</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
