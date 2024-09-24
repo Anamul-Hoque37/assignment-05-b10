@@ -14,16 +14,16 @@
 </head>
 
 <body class="container bg-[#FFFFFF]">
-    <header class=" top-0 left-0 backdrop-blur-3xl">
+    <header class="sticky top-0 backdrop-blur-3xl">
         <nav class="flex flex-col md:flex-row gap-6 justify-between items-center bg-[#F9F7F3] h-60 md:h-36 py-8 px-36">
             <a href="blog.html"><button class="rounded-lg bg-[#B4F461] h-12 w-28 py-3 px-8">Blog</button></a>
             <div class="flex w-64 h-12 justify-center items-center gap-2">
                 <img src="assets/logo.png" alt="">
                 <h2 class="text-xl font-semibold text-[#111111]">Donate Bangladesh</h2>
             </div>
-            <div class="flex gap-2">
+            <div class="flex justify-center gap-2">
                 <img src="assets/coin.png" alt="">
-                <p class="text-xl font-medium text-[#111111B3]"><span id="my-cash">5000</span> BDT</p>
+                <p class="flex gap-1 text-xl font-medium text-[#111111B3]"><span id="my-cash">50000</span> BDT</p>
             </div>
         </nav>
         <div class="flex items-center justify-center gap-4 py-8">
@@ -31,8 +31,8 @@
             <button id="show-history" class="rounded-lg h-12 w-36 py-3 px-8 text-center">History</button>
         </div>
     </header>
-    <main id="main">
-        <div class="flex flex-col mx-10 lg:mx-40 mt-5 mb-20 gap-8">
+    <main>
+        <div id="card-form" class="flex flex-col mx-10 lg:mx-40 mt-5 mb-20 gap-8">
             <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
                 <div class="rounded-xl w-full h-full">
                     <img class="w-full h-full" src="assets/noakhali.png" alt="">
@@ -113,13 +113,13 @@
             </div>
             <div></div>
         </div>
-        <div class="flex-row gap-6">
-
+        <!-- history section -->
+        <div id="history-form" class="mx-8 lg:mx-60 gap-6 hidden">
+            <h2 class="text-2xl font-bold text-black">History Transaction List</h2>
+            <div id="history" class="flex-row my-4">  
+            </div>
         </div>
-
-
         <!-- Modal section added -->
-
         <!-- Open the modal using ID.showModal() method -->
         <div>
             <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
@@ -139,12 +139,8 @@
             </dialog>
 
         </div>
-
-
-
-
     </main>
-    <footer id="footer" class="bg-[#F9F7F3] h-40">
+    <footer class="bg-[#F9F7F3] h-40">
 
     </footer>
     <script src="js/first.js"></script>

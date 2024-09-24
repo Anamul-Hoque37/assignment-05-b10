@@ -5,67 +5,89 @@ const modalContainer = document.getElementById('my_modal_1');
 
 
 
-document.getElementById('donate-for-noakhali').addEventListener('click', function(){
+document.getElementById('donate-for-noakhali').addEventListener('click', function () {
 
-    const myCash = parseFloat(document.getElementById('my-cash').innerText);
-    const inputAmount = parseFloat(document.getElementById('input-amount-noakhali').value);
-    const amountNoakhali = parseFloat(document.getElementById('amount-noakhali').innerText);
+   const myCash = inputRemainingAmountById('my-cash');
+   const inputAmount = inputDonationAmountById('input-amount-noakhali');
+   const amountNoakhali = inputRemainingAmountById('amount-noakhali');
 
-    const newAmountNoakhali = amountNoakhali + inputAmount;
-    const remainingMyCash = myCash - inputAmount;
+   const newAmountNoakhali = amountNoakhali + inputAmount;
+   const remainingMyCash = myCash - inputAmount;
 
-     if (inputAmount > 0 && myCash > inputAmount && typeof(inputAmount) === 'number'){
-        document.getElementById('amount-noakhali').innerText = newAmountNoakhali ;
-        document.getElementById('my-cash').innerText = remainingMyCash ;
+   if (inputAmount > 0 && myCash >= inputAmount && typeof(inputAmount) === 'number') {
+      document.getElementById('amount-noakhali').innerText = newAmountNoakhali;
+      document.getElementById('my-cash').innerText = remainingMyCash;
 
 
-     }else{
-        alert('Invalid Amount');
-        document.getElementById('my_modal_1').close();
-     }
+      const div = document.createElement("div");
+      div.className = "bg-white p-4 rounded-md my-2 border-2 space-y-4";
+      div.innerHTML = `
+      <p class=text-2xl font-bold text-slate-400>${inputAmount}  Taka is Donated for flood relief in Noakhali,Bangladesh.</p>
+      <p class=text-base text-slate-400>${new Date().toString()}</p>
+      `;
+      historyContainer.insertBefore(div, historyContainer.firstChild);
+
+   } else {
+      alert('Invalid Donation Amount');
+      modalContainer.close();
+   }
 })
 
 
 
 
 
-document.getElementById('donate-for-feni').addEventListener('click', function(){
+document.getElementById('donate-for-feni').addEventListener('click', function () {
 
-    const myCash = parseFloat(document.getElementById('my-cash').innerText);
-    const inputAmount = parseFloat(document.getElementById('input-amount-feni').value);
-    const amountFeni = parseFloat(document.getElementById('amount-feni').innerText);
+   const myCash = inputRemainingAmountById('my-cash');
+   const inputAmount = inputDonationAmountById('input-amount-feni');
+   const amountFeni = inputRemainingAmountById('amount-feni');
 
-    const newAmountFeni = amountFeni + inputAmount;
-    const remainingMyCash = myCash - inputAmount;
+   const newAmountFeni = amountFeni + inputAmount;
+   const remainingMyCash = myCash - inputAmount;
 
-     if (inputAmount > 0 && myCash > inputAmount){
-        document.getElementById('amount-feni').innerText = newAmountFeni ;
-        document.getElementById('my-cash').innerText = remainingMyCash ;
+   if (inputAmount > 0 && myCash >= inputAmount) {
+      document.getElementById('amount-feni').innerText = newAmountFeni;
+      document.getElementById('my-cash').innerText = remainingMyCash;
 
-     }else{
-        alert('Invalid Amount');
-        document.getElementById('my_modal_1').close();
-     }
+      const div = document.createElement("div");
+      div.className = "bg-white p-4 rounded-md my-2 border-2 space-y-4";
+      div.innerHTML = `
+      <p class=text-2xl font-bold text-slate-400>${inputAmount}  Taka is Donated for flood relief in Feni,Bangladesh.</p>
+      <p class=text-base text-slate-400>${new Date().toString()}</p>
+      `;
+      historyContainer.insertBefore(div, historyContainer.firstChild);
+   } else {
+      alert('Invalid Donation Amount');
+      modalContainer.close();
+   }
 })
 
 
 
-document.getElementById('donate-for-quota').addEventListener('click', function(){
+document.getElementById('donate-for-quota').addEventListener('click', function () {
 
-    const myCash = parseFloat(document.getElementById('my-cash').innerText);
-    const inputAmount = parseFloat(document.getElementById('input-amount-quota').value);
-    const amountQuota = parseFloat(document.getElementById('amount-quota').innerText);
+   const myCash = inputRemainingAmountById('my-cash');
+   const inputAmount = inputDonationAmountById('input-amount-quota');
+   const amountQuota = inputRemainingAmountById('amount-quota');
 
-    const newAmountQuota = amountQuota + inputAmount;
-    const remainingMyCash = myCash - inputAmount;
+   const newAmountQuota = amountQuota + inputAmount;
+   const remainingMyCash = myCash - inputAmount;
 
-     if (inputAmount > 0 && myCash > inputAmount){
-        document.getElementById('amount-quota').innerText = newAmountQuota ;
-        document.getElementById('my-cash').innerText = remainingMyCash ;
+   if (inputAmount > 0 && myCash >= inputAmount) {
+      document.getElementById('amount-quota').innerText = newAmountQuota;
+      document.getElementById('my-cash').innerText = remainingMyCash;
 
-     }else{
-        alert('Invalid Amount');
-        document.getElementById('my_modal_1').close();
-     }
+      const div = document.createElement("div");
+      div.className = "bg-white p-4 rounded-md my-2 border-2 space-y-4";
+      div.innerHTML = `
+      <p class=text-2xl font-bold text-slate-400>${inputAmount}  Taka is Donated for Aid for Injured in the Quota Movement,Bangladesh.</p>
+      <p class=text-base text-slate-400>${new Date().toString()}</p>
+      `;
+      historyContainer.insertBefore(div, historyContainer.firstChild);
+   } else {
+      alert('Invalid Donation Amount');
+      modalContainer.close();
+   }
 })
 

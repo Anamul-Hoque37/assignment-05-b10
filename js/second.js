@@ -1,7 +1,9 @@
 
 
-const showDonation = document.getElementById('show-donation')
-const showHistory = document.getElementById('show-history')
+const showDonation = document.getElementById('show-donation');
+const showHistory = document.getElementById('show-history');
+const historyContainer = document.getElementById('history');
+
 
 showDonation.addEventListener('click', function(){
     document.getElementById('show-donation').classList.add(
@@ -10,8 +12,8 @@ showDonation.addEventListener('click', function(){
     showHistory.classList.remove(
         "bg-[#B4F461]"
     );
-    document.getElementById('main').classList.remove("hidden")
-    document.getElementById('footer').classList.add("hidden")
+    document.getElementById('card-form').classList.remove("hidden")
+    document.getElementById('history-form').classList.add("hidden")
 })
 
 showHistory.addEventListener('click', function(){
@@ -21,6 +23,6 @@ showHistory.addEventListener('click', function(){
     showDonation.classList.remove(
         "bg-[#B4F461]"
     );
-    document.getElementById('main').classList.add("hidden")
-    document.getElementById('footer').classList.remove("hidden")
+    document.getElementById('card-form').classList.add("hidden")
+    document.getElementById('history-form').classList.remove("hidden")
 })
