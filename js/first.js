@@ -1,7 +1,7 @@
 
 
 
-
+const modalContainer = document.getElementById('my_modal_1');
 
 
 
@@ -18,8 +18,10 @@ document.getElementById('donate-for-noakhali').addEventListener('click', functio
         document.getElementById('amount-noakhali').innerText = newAmountNoakhali ;
         document.getElementById('my-cash').innerText = remainingMyCash ;
 
+
      }else{
         alert('Invalid Amount');
+        document.getElementById('my_modal_1').close();
      }
 })
 
@@ -42,6 +44,7 @@ document.getElementById('donate-for-feni').addEventListener('click', function(){
 
      }else{
         alert('Invalid Amount');
+        document.getElementById('my_modal_1').close();
      }
 })
 
@@ -62,6 +65,7 @@ document.getElementById('donate-for-quota').addEventListener('click', function()
 
      }else{
         alert('Invalid Amount');
+        document.getElementById('my_modal_1').close();
      }
 })
 

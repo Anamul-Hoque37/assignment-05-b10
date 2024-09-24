@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Donate Bangladesh</title>
 </head>
 
 <body class="container bg-[#FFFFFF]">
     <header class=" top-0 left-0 backdrop-blur-3xl">
-        <nav class="flex justify-between items-center bg-[#F9F7F3] h-36 px-36">
+        <nav class="flex flex-col md:flex-row gap-6 justify-between items-center bg-[#F9F7F3] h-60 md:h-36 py-8 px-36">
             <a href="blog.html"><button class="rounded-lg bg-[#B4F461] h-12 w-28 py-3 px-8">Blog</button></a>
             <div class="flex w-64 h-12 justify-center items-center gap-2">
                 <img src="assets/logo.png" alt="">
@@ -30,12 +32,12 @@
         </div>
     </header>
     <main id="main">
-        <div class="flex flex-col mx-40 mt-5 mb-20 gap-8">
-            <div class="flex flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
-                <div class="h-max w-max rounded-xl">
+        <div class="flex flex-col mx-10 lg:mx-40 mt-5 mb-20 gap-8">
+            <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
+                <div class="rounded-xl w-full h-full">
                     <img class="w-full h-full" src="assets/noakhali.png" alt="">
                 </div>
-                <div class="flex flex-col justify-between w-1/2">
+                <div class="flex flex-col justify-between w-full">
                     <div class="flex flex-col items-start gap-4">
                         <div class="flex flex-row py-3 px-4 bg-[#1111110D] w-40 rounded-lg">
                             <img src="assets/coin.png" alt="">
@@ -52,15 +54,15 @@
                     <input id="input-amount-noakhali" class="p-5 my-4 border-2 rounded-lg"
                         placeholder="Write Donation Amount" type="text">
                     <button id="donate-for-noakhali"
-                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4">Donate
+                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4"  onclick="my_modal_1.showModal()">Donate
                         Now</button>
                 </div>
             </div>
-            <div class="flex flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
-                <div class="h-max w-max rounded-xl">
+            <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
+                <div class="h-full w-full rounded-xl">
                     <img class="w-full h-full" src="assets/feni.png" alt="">
                 </div>
-                <div class="flex flex-col justify-between w-1/2">
+                <div class="flex flex-col justify-between h-full w-full">
                     <div class="flex flex-col items-start gap-4">
                         <div class="flex flex-row py-3 px-4 bg-[#1111110D] w-40 rounded-lg">
                             <img src="assets/coin.png" alt="">
@@ -78,15 +80,15 @@
                     <input id="input-amount-feni" class="p-5 my-4 border-2 rounded-lg"
                         placeholder="Write Donation Amount" type="text">
                     <button id="donate-for-feni"
-                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4">Donate
+                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4"  onclick="my_modal_1.showModal()">Donate
                         Now</button>
                 </div>
             </div>
-            <div class="flex flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
-                <div class="h-max w-max rounded-xl">
+            <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
+                <div class="h-full w-full rounded-xl">
                     <img class="w-full h-full" src="assets/quota-protest.png" alt="">
                 </div>
-                <div class="flex flex-col justify-between w-1/2">
+                <div class="flex flex-col justify-between h-full w-full ">
                     <div class="flex flex-col items-start gap-4">
                         <div class="flex flex-row py-3 px-4 bg-[#1111110D] w-40 rounded-lg">
                             <img src="assets/coin.png" alt="">
@@ -105,7 +107,7 @@
                     <input id="input-amount-quota" class="p-5 my-4 border-2 rounded-lg"
                         placeholder="Write Donation Amount" type="text">
                     <button id="donate-for-quota"
-                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4">Donate
+                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4"  onclick="my_modal_1.showModal()">Donate
                         Now</button>
                 </div>
             </div>
@@ -114,6 +116,33 @@
         <div class="flex-row gap-6">
 
         </div>
+
+
+        <!-- Modal section added -->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <div>
+            <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+            <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                    <h1 class="text-3xl font-bold text-center">Congrats</h1>
+                    <h3 class="text-lg font-bold text-center">You Have Donated for Humankind</h3>
+                    <h2 class="text-2xl font-bold text-center">Successfully</h2>
+                    <p class="py-4 text-center" >Press ESC key or click the button below to close</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn text-center`">Close Confirmation</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+        </div>
+
+
+
+
     </main>
     <footer id="footer" class="bg-[#F9F7F3] h-40">
 
