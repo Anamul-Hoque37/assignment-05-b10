@@ -15,7 +15,8 @@
 
 <body class="container bg-[#FFFFFF]">
     <header class="sticky top-0 backdrop-blur-3xl">
-        <nav class="flex flex-col md:flex-row gap-6 justify-between items-center bg-[#F9F7F3] h-60 md:h-36 py-8 px-36">
+        <!-- NavBar Section -->
+        <nav class="flex flex-col md:flex-row gap-6 justify-between bg-opacity-50 items-center bg-[#F9F7F3] h-60 md:h-36 py-8 px-36">
             <a href="blog.html"><button class="rounded-lg bg-[#B4F461] h-12 w-28 py-3 px-8">Blog</button></a>
             <div class="flex w-64 h-12 justify-center items-center gap-2">
                 <img src="assets/logo.png" alt="">
@@ -26,19 +27,21 @@
                 <p class="flex gap-1 text-xl font-medium text-[#111111B3]"><span id="my-cash">50000</span> BDT</p>
             </div>
         </nav>
+        <!-- Banner Section -->
         <div class="flex items-center justify-center gap-4 py-8">
             <button id="show-donation" class="rounded-lg bg-[#B4F461] h-12 w-36 py-3 px-8 text-center">Donation</button>
             <button id="show-history" class="rounded-lg h-12 w-36 py-3 px-8 text-center">History</button>
         </div>
     </header>
     <main>
+        <!-- Card section -->
         <div id="card-form" class="flex flex-col mx-10 lg:mx-40 mt-5 mb-20 gap-8">
             <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
-                <div class="rounded-xl w-full h-full">
+                <div class="rounded-2xl w-full h-full">
                     <img class="w-full h-full" src="assets/noakhali.png" alt="">
                 </div>
-                <div class="flex flex-col justify-between w-full">
-                    <div class="flex flex-col items-start gap-4">
+                <div class="flex flex-col justify-center h-full w-full gap-2">
+                    <div class="flex flex-col items-start gap-1">
                         <div class="flex flex-row py-3 px-4 bg-[#1111110D] w-40 rounded-lg">
                             <img src="assets/coin.png" alt="">
                             <p class="text-base font-normal text-[#111111B3]"><span id="amount-noakhali">10000</span>
@@ -51,19 +54,19 @@
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of those in need.</p>
                     </div>
-                    <input id="input-amount-noakhali" class="p-5 my-4 border-2 rounded-lg"
+                    <input id="input-amount-noakhali" class="p-3 border-2 rounded-lg"
                         placeholder="Write Donation Amount" type="text">
                     <button id="donate-for-noakhali"
-                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4"  onclick="my_modal_1.showModal()">Donate
+                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg p-3"  onclick="my_modal_1.showModal()">Donate
                         Now</button>
                 </div>
             </div>
             <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
-                <div class="h-full w-full rounded-xl">
+                <div class="h-full w-full rounded-2xl">
                     <img class="w-full h-full" src="assets/feni.png" alt="">
                 </div>
-                <div class="flex flex-col justify-between h-full w-full">
-                    <div class="flex flex-col items-start gap-4">
+                <div class="flex flex-col justify-center h-full w-full gap-2">
+                    <div class="flex flex-col items-start gap-1">
                         <div class="flex flex-row py-3 px-4 bg-[#1111110D] w-40 rounded-lg">
                             <img src="assets/coin.png" alt="">
                             <p class="text-base font-normal text-[#111111B3]"><span id="amount-feni">10000</span> BDT
@@ -77,19 +80,19 @@
                             this disaster. Every contribution counts towards making a real difference. Please consider
                             donating today to assist those in urgent need.</p>
                     </div>
-                    <input id="input-amount-feni" class="p-5 my-4 border-2 rounded-lg"
+                    <input id="input-amount-feni" class="p-3 border-2 rounded-lg"
                         placeholder="Write Donation Amount" type="text">
                     <button id="donate-for-feni"
-                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4"  onclick="my_modal_1.showModal()">Donate
+                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg p-3"  onclick="my_modal_1.showModal()">Donate
                         Now</button>
                 </div>
             </div>
             <div class="flex flex-col lg:flex-row rounded-2xl border-zinc-200 border-2 gap-8 bg-[#FFFFFF] p-8">
-                <div class="h-full w-full rounded-xl">
+                <div class="h-full w-full rounded-2xl">
                     <img class="w-full h-full" src="assets/quota-protest.png" alt="">
                 </div>
-                <div class="flex flex-col justify-between h-full w-full ">
-                    <div class="flex flex-col items-start gap-4">
+                <div class="flex flex-col justify-center h-full w-full gap-2">
+                    <div class="flex flex-col items-start gap-1">
                         <div class="flex flex-row py-3 px-4 bg-[#1111110D] w-40 rounded-lg">
                             <img src="assets/coin.png" alt="">
                             <p class="text-base font-normal text-[#111111B3]"><span id="amount-quota">10000</span> BDT
@@ -104,10 +107,10 @@
                             suffering and aiding in their recovery. Please consider making a donation to support these
                             brave individuals in their time of need.</p>
                     </div>
-                    <input id="input-amount-quota" class="p-5 my-4 border-2 rounded-lg"
+                    <input id="input-amount-quota" class="p-3 border-2 rounded-lg"
                         placeholder="Write Donation Amount" type="text">
                     <button id="donate-for-quota"
-                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg px-8 py-4"  onclick="my_modal_1.showModal()">Donate
+                        class="text-xl text-[#111111] font-semibold bg-[#B4F461] rounded-lg p-3"  onclick="my_modal_1.showModal()">Donate
                         Now</button>
                 </div>
             </div>
@@ -120,19 +123,18 @@
             </div>
         </div>
         <!-- Modal section added -->
-        <!-- Open the modal using ID.showModal() method -->
         <div>
             <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
             <dialog id="my_modal_1" class="modal">
-                <div class="modal-box">
-                    <h1 class="text-3xl font-bold text-center">Congrats</h1>
+                <div class="modal-box flex flex-col items-center">
+                    <h1 class="text-4xl font-extrabold text-center pb-4">Congrats</h1>
+                    <img src="assets/coin.png" alt="">
                     <h3 class="text-lg font-bold text-center">You Have Donated for Humankind</h3>
                     <h2 class="text-2xl font-bold text-center">Successfully</h2>
-                    <p class="py-4 text-center" >Press ESC key or click the button below to close</p>
                     <div class="modal-action">
                         <form method="dialog">
                             <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn text-center`">Close Confirmation</button>
+                            <button class="btn text-lg">Close Confirmation</button>
                         </form>
                     </div>
                 </div>
@@ -141,7 +143,6 @@
         </div>
     </main>
     <footer class="bg-[#F9F7F3] h-40">
-
     </footer>
     <script src="js/first.js"></script>
     <script src="js/second.js"></script>

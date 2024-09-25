@@ -10,12 +10,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Donate bangladesh</title>
     
 </head>
 <body class="container">
-    <header>
-        <nav class="flex flex-col lg:flex-row justify-between items-center bg-[#F9F7F3] h-60 lg:h-36 py-10 px-36">
+    <header class="sticky top-0 z-40 backdrop-blur">
+        <nav class="flex flex-col bg-opacity-50 lg:flex-row justify-between items-center bg-[#F9F7F3] h-60 lg:h-36 py-10 px-36">
             <a href="index.html"><button class="rounded-lg bg-[#B4F461] h-12 w-28 py-3 px-8">Home</button></a>
             <div class="flex w-64 h-12 justify-center items-center gap-2">
                 <img src="assets/logo.png" alt="">
@@ -27,14 +28,47 @@
             </div>
         </nav>
     </header>
-    <main class="flex flex-col mx-12 lg:mx-40">
+    <main class="flex flex-col mx-12 lg:mx-40 mb-32">
         <div class="text-4xl font-bold py-8">
             <h1>Important FAQ</h1>
         </div>
+
+
+        <!-- <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div> -->
+          <!-- <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div> -->
+
+
+
         <div class="flex flex-col border-2 w-full rounded-xl">
             <ul class="menu bg-white rounded-box">
                 <li>
-                    <details open>
+                    <details close>
                         <summary class="text-xl font-medium">What is the Document Object Model (DOM)?</summary>
                         <ul>
                             <li><a>The Document Object Model (DOM) is a programming API for HTML and XML documents. It
@@ -48,7 +82,7 @@
         <div class="flex flex-col border-2 w-full rounded-xl">
             <ul class="menu bg-white rounded-box">
                 <li>
-                    <details open>
+                    <details close>
                         <summary class="text-xl font-medium">How do you select an element from the DOM ?</summary>
                         <ul>
                             <li><a>JavaScript provides several methods to select DOM elements. Here are some of them:
@@ -66,7 +100,7 @@
         <div class="flex flex-col border-2 w-full rounded-xl">
             <ul class="menu bg-white rounded-box">
                 <li>
-                    <details open>
+                    <details close>
                         <summary class="text-xl font-medium">What is event delegation in the context of the DOM and why it is Useful?</summary>
                         <ul>
                         <li><a>Capturing and bubbling allow us to implement one of the most         powerful event handling
@@ -82,7 +116,7 @@
         <div class="flex flex-col border-2 w-full rounded-xl">
             <ul class="menu bg-white rounded-box">
                 <li>
-                    <details open>
+                    <details close>
                         <summary class="text-xl font-medium">How do you manipulate an elements attributes and style using the DOM ?</summary>
                         <ul>
                             <li><a>The following are the most common and practical ways you might want to manipulate the Element object:
@@ -99,5 +133,7 @@
             </ul>
         </div>
     </main>
+    <footer class="bg-[#F9F7F3] h-40">
+    </footer>
 </body>
 </html>
